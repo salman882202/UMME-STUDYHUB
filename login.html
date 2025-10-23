@@ -1,122 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StudyHub – Login</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Study Hub</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f0f8ff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    header {
+      background: #2E8B57; /* change to #007BFF for blue */
+      color: white;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    /* Login Container */
+    .login-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+    }
+
+    .login-box {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 380px;
+      text-align: center;
+    }
+
+    .login-box h2 {
+      margin-bottom: 25px;
+      color: #2E8B57;
+    }
+
+    .login-box input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .login-box button {
+      width: 100%;
+      padding: 12px;
+      background: #2E8B57;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .login-box button:hover {
+      background: #246b45;
+    }
+
+    .login-box p {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .login-box a {
+      color: #2E8B57;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Footer */
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    @media (max-width: 480px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+
+      .login-box {
+        padding: 30px 20px;
+      }
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Header -->
+  <header>
+    <h1>Study Hub</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Login Section -->
   <div class="login-container">
     <div class="login-box">
-      <h2>Login to Umme StudyHub</h2>
-      <form id="loginForm">
-        <div class="input-group">
-          <label for="Phone">Phone number</label>
-          <input type="number" id="Phone" placeholder="Enter your number" required>
-        </div>
-
-        <div class="input-group">
-          <label for="password">Password</label>
-          <input type="password" id="password" placeholder="Enter your password" required>
-        </div>
-
-        <button type="submit" class="login-btn">Login</button>
+      <h2>Login to Your Account</h2>
+      <form action="#" method="post">
+        <input type="email" placeholder="Email Address" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit">Login</button>
       </form>
-      <p class="signup-text">Don't have an account? <a href="register.html">Sign Up</a></p>
+      <p>Don't have an account? <a href="register.html">Sign Up</a></p>
+      <p><a href="forgotpass.html">Forgot Password?</a></p>
     </div>
   </div>
 
-  <script>
-    const loginForm = document.getElementById('loginForm');
-    loginForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert("Login functionality will be connected to backend soon!");
-    });
-  </script>
-  <style>
-    /* ---------- Login Page ---------- */
-.login-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 80vh;
-  background: #f5f7fa;
-  padding: 2rem;
-}
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Study Hub | All Rights Reserved</p>
+  </footer>
 
-.login-box {
-  background: #fff;
-  padding: 2.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  width: 100%;
-  max-width: 400px;
-  text-align: center;
-}
-
-.login-box h2 {
-  margin-bottom: 1.5rem;
-  color: #4a90e2;
-}
-
-.input-group {
-  margin-bottom: 1rem;
-  text-align: left;
-}
-
-.input-group label {
-  display: block;
-  margin-bottom: 0.3rem;
-  font-weight: bold;
-  color: #333;
-}
-
-.input-group input {
-  width: 100%;
-  padding: 0.7rem 1rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: border 0.3s;
-}
-
-.input-group input:focus {
-  border-color: #4a90e2;
-  outline: none;
-}
-
-.login-btn {
-  width: 100%;
-  padding: 0.8rem;
-  background: #4a90e2;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: background 0.3s;
-  margin-top: 0.5rem;
-}
-
-.login-btn:hover {
-  background: #357ab8;
-}
-
-.signup-text {
-  margin-top: 1rem;
-  font-size: 0.9rem;
-}
-
-.signup-text a {
-  color: #4a90e2;
-  text-decoration: none;
-}
-
-.signup-text a:hover {
-  text-decoration: underline;
-}
-
-
-  </style>
 </body>
 </html>
