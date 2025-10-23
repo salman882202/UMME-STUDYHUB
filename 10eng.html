@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-widht, initial-scale=1.0">
+
+<body>
+    <header>
+        <h1>UMME STUDY HUB</h1>
+    </header>
+    <section class="class-grid">
+        <a href="10ncert books/First Flight - English Textbook_Class_X.pdf" class="box-btn">FIRST FLIGHT</a>
+        <a href="" class="box-btn">FOOTPRINT WITHOUT FEET</a>
+        <a href="" class="box-btn">GRAMMER BOOK</a>
+    </section>
+    <style>
+        .class-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1rem;
+            padding: 2rem;
+            flex: 1;
+        }
+
+        .box-btn {
+            background: #fff;
+            border: 2px solid #4a90e2;
+            text-align: center;
+            padding: 1.2rem;
+            text-decoration: none;
+            font-weight: bold;
+            color: #4a90e2;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .box-btn:hover {
+            background: #4a90e2;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        footer {
+            background: #eee;
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7fa;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #4a90e2;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</body>
+</head>
+
+</html>

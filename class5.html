@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyHub – Class 5</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Class 10</h1>
+    <p><a href="main.html" class="back-home">← Back to Home</a></p>
+  </header>
+
+  <main class="class-grid">
+    <a href="SUBJECT/5hysub.html"   class="class-btn">Half-Yearly PYQ</a>
+    <a href="SUBJECT/5finalsub.html"        class="class-btn">Final PYQ</a>
+    <a href="class10-ncert.html"        class="class-btn">NCERT Notes</a>
+    <a href="class10-additional-notes.html" class="class-btn">Additional Notes</a>
+    <a href="class10-additional-mcq.html"   class="class-btn">Additional MCQ</a>
+    <a href="class10-premium.html"      class="class-btn">Premium Section 💎</a>
+  </main>
+  <style>
+    /* ---------- Base Reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f5f7fa;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ---------- Header ---------- */
+header {
+  background: #4a90e2;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.back-home {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+/* ---------- Button Grid ---------- */
+.class-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+  flex: 1;   /* pushes footer down */
+}
+
+.class-btn {
+  background: #fff;
+  border: 2px solid #4a90e2;
+  text-align: center;
+  padding: 1.2rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: #4a90e2;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.class-btn:hover {
+  background: #4a90e2;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background: #eee;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+  </style>
+
+  <footer>
+    <p>© 2025 StudyHub | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
