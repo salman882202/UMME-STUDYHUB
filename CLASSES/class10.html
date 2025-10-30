@@ -4,25 +4,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StudyHub Class 9</title>
+  <title>StudyHub Class 10</title>
 </head>
 
 <body>
   <header>
-    <h1>Class 9</h1>
-    <p><a href="index.html" class="back-home">← Back to Home</a></p>
+    <h1>Class 10</h1>
   </header>
+
   <main class="class-grid">
-    <a href="" class="class-btn">Half-Yearly PYQ<br>(Comming soon)</a>
-    <a href="" class="class-btn">Final PYQ<br>(Comming soon)</a>
-    <a href="" class="class-btn">Ncert books (Comming soon)</a>
-    <a href="" class="class-btn">NCERT Notes (Comming soon)</a>
-    <a href="" class="class-btn">Additional Notes (Comming soon)</a>
-    <a href="" class="class-btn">Additional MCQ (Comming soon)</a>
-    <a href="" class="class-btn">Premium Section 💎 (Comming soon)</a>
+    <a href="../BOOKS/bookspages/10ncertbooks.html" class="class-btn">NCERT books </a>
+    <a href="../ADDITIONAL NOTES/CLASSES/10addnotes.html" class="class-btn">Additional Note</a>
   </main>
   <style>
-    /* ---------- Base Reset ---------- */
     * {
       margin: 0;
       padding: 0;
@@ -40,7 +34,7 @@
 
     /* ---------- Header ---------- */
     header {
-      background: #4a90e2;
+      background: #2E8B57;
       color: #fff;
       text-align: center;
       padding: 2rem 1rem;
@@ -60,37 +54,40 @@
     /* ---------- Button Grid ---------- */
     .class-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 1rem;
-      padding: 2rem;
-      flex: 1;
+      gap: 10px;
+      padding: 10px;
+      flex: 0;
       /* pushes footer down */
     }
 
     .class-btn {
-      background: #fff;
-      border: 2px solid #4a90e2;
+      background: #fff8;
+      border: 2px solid #2E8B57;
       text-align: center;
-      padding: 1.2rem;
+      padding: 15px;
       text-decoration: none;
       font-weight: bold;
-      color: #4a90e2;
+      color: #2E8B57;
       border-radius: 12px;
       transition: all 0.3s ease;
     }
 
     .class-btn:hover {
-      background: #4a90e2;
+      background: #2E8B57;
       color: #fff;
       transform: translateY(-3px);
     }
 
     /* ---------- Footer ---------- */
     footer {
-      background: #eee;
+      background: #333;
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
+      color: #f5f7fa;
+      bottom: 0;
+      width: 100%;
+      position: absolute;
     }
   </style>
 
