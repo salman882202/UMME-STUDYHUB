@@ -16,24 +16,27 @@
 
   body {
     font-family: 'Poppins', sans-serif;
-    background: #0f1115;
-    color: #eaeaea;
+    background: #f5f7fa;
+    color: #333;
     line-height: 1.6;
     overflow-x: hidden;
   }
 
   /* Hero Section */
   .hero {
-    height: 70vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
-                url('https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=1600&q=80') center/cover;
+    margin-top: 0;
+    height: 60vh;
+    background: linear-gradient(135deg, #2E8B57, #3cb371);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: #fff;
-    position: relative;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+
   }
 
   .hero h1 {
@@ -45,26 +48,8 @@
   .hero p {
     font-size: 1.2rem;
     margin-top: 15px;
-    color: #cfcfcf;
+    color: #eaffea;
     animation: fadeInUp 1.2s ease forwards;
-  }
-
-  .hero button {
-    margin-top: 25px;
-    padding: 12px 25px;
-    font-size: 1rem;
-    color: #fff;
-    background: #4CAF50;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: 0.3s ease;
-    animation: fadeInUp 1.4s ease forwards;
-  }
-
-  .hero button:hover {
-    background: #3d8b40;
-    transform: scale(1.05);
   }
 
   /* Sections */
@@ -77,28 +62,13 @@
     animation: fadeInSection 1s ease forwards;
   }
 
-  section:nth-of-type(2) {
-    animation-delay: 0.2s;
-  }
-  section:nth-of-type(3) {
-    animation-delay: 0.4s;
-  }
-  section:nth-of-type(4) {
-    animation-delay: 0.6s;
-  }
-
-  @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  @keyframes fadeInSection {
-    to { opacity: 1; transform: translateY(0); }
-  }
+  section:nth-of-type(2) { animation-delay: 0.2s; }
+  section:nth-of-type(3) { animation-delay: 0.4s; }
+  section:nth-of-type(4) { animation-delay: 0.6s; }
 
   h2 {
     font-size: 2rem;
-    color: #4CAF50;
+    color: #2E8B57;
     margin-bottom: 15px;
     position: relative;
   }
@@ -110,12 +80,12 @@
     bottom: -8px;
     width: 50px;
     height: 3px;
-    background: #4CAF50;
+    background: #2E8B57;
     border-radius: 3px;
   }
 
   p {
-    color: #ccc;
+    color: #444;
     font-size: 1rem;
   }
 
@@ -128,19 +98,19 @@
   }
 
   .member {
-    background: #1a1f26;
+    background: #fff;
     border-radius: 15px;
     text-align: center;
     padding: 30px 20px;
     transition: 0.4s ease;
-    border: 1px solid transparent;
-    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    border: 2px solid transparent;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   }
 
   .member:hover {
-    border: 1px solid #4CAF50;
+    border: 2px solid #2E8B57;
     transform: translateY(-8px);
-    box-shadow: 0 0 25px rgba(76,175,80,0.4);
+    box-shadow: 0 8px 20px rgba(46,139,87,0.25);
   }
 
   .member img {
@@ -148,45 +118,60 @@
     height: 130px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #4CAF50;
+    border: 3px solid #2E8B57;
     margin-bottom: 15px;
   }
 
   .member h3 {
-    color: #fff;
+    color: #2E8B57;
     margin-bottom: 5px;
     font-size: 1.2rem;
   }
 
   .member p {
-    color: #aaa;
+    color: #666;
     font-size: 0.95rem;
+  }
+
+  /* Animations */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInSection {
+    to { opacity: 1; transform: translateY(0); }
   }
 
   /* Footer */
   footer {
-    background: #0b0c0e;
+    background: #2E8B57;
     text-align: center;
     padding: 40px 20px;
     margin-top: 60px;
+    color: #fff;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.2);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+
   }
 
   footer p {
-    color: #888;
+    color: #d7ffdb;
     font-size: 0.95rem;
     margin: 10px 0;
   }
 
   .social-links a {
-    color: #4CAF50;
+    color: #fff;
     margin: 0 10px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     transition: 0.3s ease;
     text-decoration: none;
   }
 
   .social-links a:hover {
-    color: #fff;
+    color: #bfffc7;
   }
 
   @media (max-width: 600px) {
@@ -237,7 +222,7 @@
       </div>
 
       <div class="member">
-        <img src="WhatsApp Image 2025-11-04 at 16.38.59_760a2e63.jpg" alt="Co-Founder Abdul Rahman">
+        <img src="WhatsApp Image 2025-11-04 at 16.38.59_760a2e63.jpg" alt="Co-Founder Junaid Ahmed">
         <h3>Junaid Ahmed</h3>
         <p>Co-Founder & Content Strategist</p>
       </div>
@@ -247,6 +232,7 @@
   <!-- Footer -->
   <footer>
     <div class="social-links">
+      <!-- Social icons (optional) -->
     </div>
     <p>&copy; 2025 UMME LIBRARY | All Rights Reserved</p>
   </footer>

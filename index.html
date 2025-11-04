@@ -1,237 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Study Hub</title>
-    <style>
-        /* Reset and basic styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UMME LIBRARY</title>
+  <style>
 
-        body {
-            line-height: 1.6;
-            color: #333;
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+    body {
+      background: #f4f9f6;
+      color: #333;
+      line-height: 1.6;
+    }
 
-        /* Header */
-        header {
-            background: #2E8B57; /* green, change to #007BFF for blue */
-            color: white;
-            padding: 20px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #2E8B57, #3cb371);
+      color: white;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-        header h1 {
-            font-size: 28px;
-        }
+    header h1 {
+      font-size: 28px;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
 
-        nav a {
-            margin-left: 20px;
-            font-weight: bold;
-        }
+    nav a {
+      color: white;
+      margin-left: 25px;
+      font-weight: 500;
+      transition: 0.3s;
+      text-decoration: none;
+    }
 
-        /* Hero Section */
-/* Hero Section - Responsive Fix */
-.hero {
-    background: #f0f8ff;
-    text-align: center;
-    padding: 60px 20px;
-    display: flex;
-    flex-direction: column; /* stack text and buttons */
-    justify-content: center;
-    align-items: center;
-    gap: 20px; /* space between text and buttons */
-}
+    nav a:hover {
+      color: #eaffea;
+    }
 
-.hero h2 {
-    font-size: 32px;
-    color: #2E8B57;
-}
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(to right, rgba(46,139,87,0.9), rgba(80,200,120,0.9)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+      border-radius: 0 0 80px 80px;
+    }
 
-.hero p {
-    font-size: 18px;
-    max-width: 500px; 
-}
-
-.hero .buttons {
-    display: flex;
-    flex-wrap: wrap; 
-    gap: 10px;
-}
-
-.hero .buttons a {
-    padding: 12px 25px;
-    background: #2E8B57;
-    color: white;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-.hero .buttons a:hover {
-    background: #246b45;
-}
-
-@media(max-width: 480px){
     .hero h2 {
-        font-size: 26px;
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 15px;
     }
+
     .hero p {
-        font-size: 16px;
+      font-size: 18px;
+      max-width: 600px;
+      margin: 0 auto 30px;
+      opacity: 0.9;
     }
-    .hero .buttons a {
-        width: 100%; /* full width buttons on small screens */
+
+    .buttons a {
+      display: inline-block;
+      padding: 12px 30px;
+      margin: 5px;
+      border-radius: 30px;
+      font-weight: 500;
+      background: white;
+      color: #2E8B57;
+      transition: 0.3s;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .buttons a:hover {
+      background: #2E8B57;
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    /* Courses Section */
+    .courses {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .courses h2 {
+      font-size: 32px;
+      color: #2E8B57;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .courses h2::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: #2E8B57;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    .course-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.8);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 30px 20px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      transition: 0.4s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(46,139,87,0.2);
+    }
+
+    .card h3 {
+      color: #2E8B57;
+      margin-bottom: 10px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+
+    .card a {
+      display: inline-block;
+      padding: 8px 20px;
+      background: linear-gradient(135deg, #2E8B57, #3cb371);
+      color: white;
+      border-radius: 25px;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+
+    .card a:hover {
+      background: #246b45;
+    }
+
+    /* Footer */
+    footer {
+      background: #2E8B57;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 80px;
+      border-top-left-radius: 50px;
+      border-top-right-radius: 50px;
+    }
+
+    footer p {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
         text-align: center;
+        gap: 10px;
+      }
+
+      .hero h2 {
+        font-size: 30px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .course-cards {
+        flex-direction: column;
+        align-items: center;
+      }
     }
-}
-
-
-        /* Courses Section */
-        .courses {
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        .courses h2 {
-            margin-bottom: 30px;
-            color: #2E8B57;
-        }
-
-        .course-cards {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .card {
-            background: white;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            width: 250px;
-            padding: 20px;
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        .card h3 {
-            margin-bottom: 10px;
-            color: #2E8B57;
-        }
-
-        .card p {
-            margin-bottom: 15px;
-        }
-
-        .card a {
-            display: inline-block;
-            padding: 8px 15px;
-            background: #2E8B57;
-            color: white;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-
-        .card a:hover {
-            background: #246b45;
-        }
-
-        /* Footer */
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 50px;
-        }
-
-        footer a {
-            color: #fff;
-            margin: 0 10px;
-        }
-
-        @media(max-width: 768px){
-            .course-cards {
-                flex-direction: column;
-                align-items: center;
-            }
-            header {
-                flex-direction: column;
-                gap: 10px;
-            }
-        }
-    </style>
+  </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <h1>UMME LIBRARY</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-        </nav>
-    </header>
+  <header>
+    <h1>UMME LIBRARY</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
 
-    <!-- Hero Section -->
-<section class="hero">
-    <h2>Welcome to Study Hub</h2>
-    <p>Learn, Practice, and Excel in Every Subject</p>
+  <section class="hero">
+    <h2>Welcome to Umme Library</h2>
+    <p>Explore, Learn, and Succeed with our premium study materials and curated notes.</p>
     <div class="buttons">
-        <a href="main.html">Books</a>
-        <a href="main.html">Notes</a>
-
+      <a href="main.html">Books</a>
+      <a href="main.html">Notes</a>
     </div>
-</section>
+  </section>
 
-    <!-- Courses Section -->
-    <section class="courses">
-        <h2>Popular Courses</h2>
-        <div class="course-cards">
-            <div class="card">
-                <h3>Mathematics</h3>
-                <p>Expert teachers, detailed lessons & practice.</p>
-                <a href="">Enroll Now</a>
-            </div>
-            <div class="card">
-                <h3>Science</h3>
-                <p>Learn concepts with experiments and examples.</p>
-                <a href="">Enroll Now</a>
-            </div>
-            <div class="card">
-                <h3>Social Science</h3>
-                <p>History, Geography, Civics made easy.</p>
-                <a href="">Enroll Now</a>
-            </div>
-            <div class="card">
-                <h3>English</h3>
-                <p>Grammar, comprehension & writing skills.</p>
-                <a href="">Enroll Now</a>
-            </div>
-        </div>
-    </section>
+  <section class="courses">
+    <h2>Popular Courses</h2>
+    <div class="course-cards">
+      <div class="card">
+        <h3>Mathematics</h3>
+        <p>Expert lessons & practice problems that make math easy.</p>
+        <a href="#">Explore</a>
+      </div>
+      <div class="card">
+        <h3>Science</h3>
+        <p>Understand concepts with visual learning & examples.</p>
+        <a href="#">Explore</a>
+      </div>
+      <div class="card">
+        <h3>Social Science</h3>
+        <p>History, Geography & Civics simplified for students.</p>
+        <a href="#">Explore</a>
+      </div>
+      <div class="card">
+        <h3>English</h3>
+        <p>Boost grammar, writing, and comprehension skills.</p>
+        <a href="#">Explore</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Study Hub | All Rights Reserved</p>
-        <p>
-        </p>
-    </footer>
+  <footer>
+    <p>&copy; 2025 Umme Library | All Rights Reserved</p>
+  </footer>
 
 </body>
 </html>

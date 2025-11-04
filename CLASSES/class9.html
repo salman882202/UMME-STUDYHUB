@@ -1,34 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StudyHub Class 10</title>
-</head>
-
-<body>
-  <header>
-    <h1>Class 9</h1>
-  </header>
-
-  <main class="class-grid">
-    <a href="" class="class-btn">NCERT books </a>
-    <a href="" class="class-btn">NCERT NOTES </a>
-    <a href="" class="class-btn">Additional Note</a>
-    <a href="" class="class-btn">MCQ</a>
-  </main>
+  <title>Class 10 | UMME LIBRARY</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
     }
 
     body {
-      background: #f5f7fa;
-      color: #333;
+      font-family: 'Poppins', sans-serif;
+      background: #f5fff8;
+      color: #222;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
@@ -36,24 +24,22 @@
 
     /* ---------- Header ---------- */
     header {
-      background: #2E8B57;
+      background: linear-gradient(135deg, #2E8B57, #3fb573);
       color: #fff;
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 1.5rem 1rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
     }
 
     header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+      font-size: 2.3rem;
+      letter-spacing: 1px;
+      font-weight: 600;
     }
 
-    .back-home {
-      color: #fff;
-      text-decoration: none;
-      font-size: 0.9rem;
-    }
-
-    /* ---------- Button Grid ---------- */
+    /* ---------- Class Button Grid ---------- */
     .class-grid {
       display: grid;
       gap: 10px;
@@ -77,25 +63,50 @@
     .class-btn:hover {
       background: #2E8B57;
       color: #fff;
-      transform: translateY(-3px);
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(46,139,87,0.3);
     }
 
     /* ---------- Footer ---------- */
-    footer {
-      background: #333;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #f5f7fa;
-      bottom: 0;
-      width: 100%;
-      position: absolute;
+footer {
+  background: #2E8B57;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  margin-top: auto; /* Pushes footer to bottom if content is short */
+}
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      .class-grid {
+        padding: 30px 20px;
+      }
     }
   </style>
+</head>
+
+<body>
+  <header>
+    <h1>Class 9</h1>
+  </header>
+
+  <main class="class-grid">
+    <a href="" class="class-btn"> NCERT Books</a>
+    <a href="" class="class-btn"> NCERT Notes</a>
+    <a href="" class="class-btn"> Additional Notes</a>
+    <a href="" class="class-btn"> MCQs</a>
+  </main>
 
   <footer>
-    <p>© 2025 Ummelibary| All Rights Reserved</p>
+    <p>© 2025 UMME LIBRARY | All Rights Reserved</p>
   </footer>
 </body>
-
 </html>

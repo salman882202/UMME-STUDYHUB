@@ -1,145 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StudyHub Classes 1 to 10</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UMME LIBRARY | Select Your Class</title>
+
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  /* Hero Section */
+  header {
+    height: 25vh;
+    background: linear-gradient(135deg, #2E8B57, #3cb371);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    animation: fadeInUp 1s ease forwards;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+  }
+
+  header h1 {
+    font-size: 3rem;
+    letter-spacing: 1px;
+  }
+
+  header p {
+    font-size: 1.2rem;
+    color: #e8ffe9;
+    margin-top: 10px;
+  }
+
+  /* Class Grid */
+  .class-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+    padding: 60px 20px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    animation: fadeInSection 1.2s ease forwards;
+  }
+
+  .class-btn {
+    background: #fff;
+    color: #2E8B57;
+    text-align: center;
+    padding: 25px 0;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid #2E8B57;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+
+  .class-btn:hover {
+    background: #2E8B57;
+    color: #fff;
+    transform: translateY(-6px);
+    box-shadow: 0 5px 15px rgba(46,139,87,0.4);
+  }
+
+  /* Premium Section */
+  .premium-notice {
+    text-align: center;
+    background: #fff;
+    border: 2px solid #2E8B57;
+    padding: 40px 25px;
+    border-radius: 15px;
+    margin: 40px auto;
+    width: 90%;
+    max-width: 500px;
+    animation: fadeInSection 1.4s ease forwards;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .premium-notice h2 {
+    color: #2E8B57;
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+  }
+
+  .premium-notice p {
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
+
+  .premium-btn {
+    background: #2E8B57;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0 3px 10px rgba(46,139,87,0.3);
+  }
+
+  .premium-btn:hover {
+    background: #3cb371;
+    transform: scale(1.05);
+  }
+
+  /* Footer */
+  footer {
+    background: #2E8B57;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: auto;
+    color: #fff;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.2);
+          border-top-left-radius: 50px;
+      border-top-right-radius: 50px;
+
+  }
+
+  footer p {
+    color: #d7ffdb;
+    font-size: 0.95rem;
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInSection {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 600px) {
+    header h1 { font-size: 2.2rem; }
+    header p { font-size: 1rem; }
+    .class-btn { font-size: 1rem; }
+  }
+  </style>
 </head>
 
 <body>
-    <header>
-        <h1>UMME LIBRARY</h1>
-        <p>Select Your Class</p>
-    </header>
 
+  <header>
+    <h1>UMME LIBRARY</h1>
+    <p>Select Your Class</p>
+  </header>
 
-    <main class="class-grid">
-        <a href="CLASSES/class9.html" class="class-btn">Class 9</a>
-        <a href="CLASSES/class10.html" class="class-btn">Class 10</a>
-        <a href="CLASSES/class11.html" class="class-btn">Class 11</a>
-        <a href="CLASSES/class12.html" class="class-btn">Class 12</a>
+  <main>
+    <div class="class-grid">
+      <a href="CLASSES/class10.html" class="class-btn">Class 10</a>
+      <a href="STREAM 11/stream11.html" class="class-btn">Class 11</a>
+      <a href="CLASSES/class12.html" class="class-btn">Class 12</a>
+    </div>
 
+    <div class="premium-notice">
+      <h2>Go Premium</h2>
+      <p>Unlock exclusive notes, PYQs, and exam strategies crafted for top performance.</p>
+      <button class="premium-btn">Subscribe Now</button>
+    </div>
+  </main>
 
-    </main>
-    <!-- Premium Subscription Notice (Above Class Buttons) -->
+  <footer>
+    <p>&copy; 2025 UMME LIBRARY | All Rights Reserved</p>
+  </footer>
 
-<style>
-    .box-contact{
-        background: grey;
-        height: 100px;
-        width: 100%;
-        color: white;
-        text-align: center;
-    }
-    h4{
-        background: greenyellow;
-        align-items: center;
-        text-align: center;
-    }
-    .premium-notice {
-  background: #fffbe6;
-  border: 2px solid #f0a500;
-  text-align: center;
-  padding: 2rem;
-  margin: 2rem auto;
-  border-radius: 19px;
-  max-width: 300px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.premium-notice h2 {
-  color: #f0a500;
-  margin-bottom: 0.5rem;
-}
-
-.premium-notice p {
-  margin-bottom: 1rem;
-  font-size: 1rem;
-}
-
-.premium-btn {
-  background: #f0a500;
-  color: #fff;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background 0.3s;
-}
-
-.premium-btn:hover {
-  background: #d18e00;
-}
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background: #f5f7fa;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        header {
-            background: #246b45;
-            color: #fff;
-            text-align: center;
-            padding: 2rem 1rem;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .class-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 1rem;
-            padding: 2rem;
-        }
-
-        .class-btn {
-            background: #fff;
-            border: 2px solid #246b45;
-            text-align: center;
-            padding: 1.2rem;
-            text-decoration:none;
-            font-weight: bold;
-            color: #246b45;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-        }
-
-        .class-btn:hover {
-            background: #246b45;
-            color: #fff;
-            transform: translateY(-3px);
-        }
-
-        footer {
-            background: #333;
-            text-align: center;
-            padding: 1rem;
-            font-size: 0.9rem;
-            bottom: 0;
-            position: absolute;
-            width: 100%;
-            color: #f5f7fa;
-        }
-    </style>
-
-    <footer>
-        <p>© 2025 Ummelibrary | All Rights Reserved</p>
-    </footer>
 </body>
-
 </html>
