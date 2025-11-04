@@ -3,132 +3,253 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us</title>
-  <link rel="stylesheet" href="about.css">
-</head>
-<body>
+  <title>About Us | UMME LIBRARY</title>
 
-  <header>
-    <h1>About Us</h1>
-    <p>Learn more about our mission and team</p>
-  </header>
-
-  <main class="about-container">
-    <section class="intro">
-      <h2>Who We Are</h2>
-      <p>
-        Welcome to <strong>UMME LIBRARY</strong>—an all-in-one platform providing
-        class-wise notes, previous year question papers, MCQs, and premium
-        study resources. Our goal is to make learning accessible, simple, and
-        enjoyable for every student from Class 1 to Class 10.
-      </p>
-    </section>
-
-    <section class="mission">
-      <h2>Our Mission</h2>
-      <p>
-        We believe education should be available to everyone. Our team of
-        experienced teachers and content creators works daily to provide
-        high-quality, updated study material to help students excel in their
-        exams and build confidence in every subject.
-      </p>
-    </section>
-
-    <section class="team">
-      <h2>Meet the Team</h2>
-      <div class="team-grid">
-        <div class="member">
-          <img src="WhatsApp Image 2025-10-15 at 20.22.56_81e03e14.jpg" alt="Founder">
-          <h3>Salman Ahmed</h3>
-          <p>Founder & Developer</p>
-        </div>
-
-      </div>
-
-  </main>
   <style>
-    /* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #f3f3f3;
-  color: #333;
-}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-header {
-  background: #4CAF50;
-  color: #fff;
-  text-align: center;
-  padding: 40px 20px;
-}
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #0f1115;
+    color: #eaeaea;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
 
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
-}
+  /* Hero Section */
+  .hero {
+    height: 70vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
+                url('https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=1600&q=80') center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+  }
 
-header p {
-  margin-top: 10px;
-  font-size: 1.1rem;
-}
+  .hero h1 {
+    font-size: 3rem;
+    letter-spacing: 1px;
+    animation: fadeInUp 1s ease forwards;
+  }
 
-.about-container {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
+  .hero p {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    color: #cfcfcf;
+    animation: fadeInUp 1.2s ease forwards;
+  }
 
-.about-container section {
-  background: #fff;
-  border-radius: 12px;
-  padding: 30px;
-  margin-bottom: 30px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+  .hero button {
+    margin-top: 25px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    color: #fff;
+    background: #4CAF50;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    animation: fadeInUp 1.4s ease forwards;
+  }
 
-.about-container section:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
-}
+  .hero button:hover {
+    background: #3d8b40;
+    transform: scale(1.05);
+  }
 
-.about-container h2 {
-  margin-top: 0;
-  color: #4CAF50;
-}
+  /* Sections */
+  section {
+    max-width: 1100px;
+    margin: 70px auto;
+    padding: 0 25px;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInSection 1s ease forwards;
+  }
 
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-}
+  section:nth-of-type(2) {
+    animation-delay: 0.2s;
+  }
+  section:nth-of-type(3) {
+    animation-delay: 0.4s;
+  }
+  section:nth-of-type(4) {
+    animation-delay: 0.6s;
+  }
 
-.member {
-  text-align: center;
-}
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 
-.member img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
+  @keyframes fadeInSection {
+    to { opacity: 1; transform: translateY(0); }
+  }
 
-.member h3 {
-  margin: 10px 0 5px;
-  font-size: 1.2rem;
-}
+  h2 {
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-bottom: 15px;
+    position: relative;
+  }
 
-.member p {
-  font-size: 0.95rem;
-  color: #555;
-}
+  h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 50px;
+    height: 3px;
+    background: #4CAF50;
+    border-radius: 3px;
+  }
+
+  p {
+    color: #ccc;
+    font-size: 1rem;
+  }
+
+  /* Team Section */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+  }
+
+  .member {
+    background: #1a1f26;
+    border-radius: 15px;
+    text-align: center;
+    padding: 30px 20px;
+    transition: 0.4s ease;
+    border: 1px solid transparent;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  }
+
+  .member:hover {
+    border: 1px solid #4CAF50;
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(76,175,80,0.4);
+  }
+
+  .member img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4CAF50;
+    margin-bottom: 15px;
+  }
+
+  .member h3 {
+    color: #fff;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+  }
+
+  .member p {
+    color: #aaa;
+    font-size: 0.95rem;
+  }
+
+  /* Footer */
+  footer {
+    background: #0b0c0e;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+  }
+
+  footer p {
+    color: #888;
+    font-size: 0.95rem;
+    margin: 10px 0;
+  }
+
+  .social-links a {
+    color: #4CAF50;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    transition: 0.3s ease;
+    text-decoration: none;
+  }
+
+  .social-links a:hover {
+    color: #fff;
+  }
+
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 2.2rem; }
+    .hero p { font-size: 1rem; }
+    section { margin: 50px auto; }
+  }
 
   </style>
+</head>
+
+<body>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>About UMME LIBRARY</h1>
+    <p>Empowering Students with Smarter, Simpler Learning</p>
+  </section>
+
+  <!-- Who We Are -->
+  <section class="intro">
+    <h2>Who We Are</h2>
+    <p>
+      Welcome to <strong>UMME LIBRARY</strong> — a modern educational platform dedicated to providing
+      class-wise notes, previous year question papers, MCQs, and premium study resources.  
+      Our vision is to simplify learning and make it accessible to every student, anytime, anywhere.
+    </p>
+  </section>
+
+  <!-- Mission -->
+  <section class="mission">
+    <h2>Our Mission</h2>
+    <p>
+      We’re on a mission to redefine how students learn.  
+      With a blend of technology and expert-curated content, we aim to make education not just effective — but enjoyable.  
+      Every resource on our platform is designed to boost confidence and performance in exams.
+    </p>
+  </section>
+
+  <!-- Team -->
+  <section class="team">
+    <h2>Meet the Team</h2>
+    <div class="team-grid">
+      <div class="member">
+        <img src="WhatsApp Image 2025-10-15 at 20.22.56_81e03e14.jpg" alt="Founder Salman Ahmed">
+        <h3>Salman Ahmed</h3>
+        <p>Founder & Developer</p>
+      </div>
+
+      <div class="member">
+        <img src="WhatsApp Image 2025-11-04 at 16.38.59_760a2e63.jpg" alt="Co-Founder Abdul Rahman">
+        <h3>Junaid Ahmed</h3>
+        <p>Co-Founder & Content Strategist</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="social-links">
+    </div>
+    <p>&copy; 2025 UMME LIBRARY | All Rights Reserved</p>
+  </footer>
 
 </body>
 </html>
