@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UMME LIBRARY</title>
   <style>
-
     * {
       margin: 0;
       padding: 0;
@@ -51,6 +50,85 @@
       color: #eaffea;
     }
 
+/* ===== Banner Slider (Fixed Version) ===== */
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  background: #eee;
+  aspect-ratio: 16 / 6; /* maintains good height automatically */
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Buttons */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background 0.3s;
+}
+
+.nav-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+/* Dots */
+.dots {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #2E8B57;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .slider {
+    aspect-ratio: 16 / 9;
+  }
+}
     /* Hero Section */
     .hero {
       background: linear-gradient(to right, rgba(46,139,87,0.9), rgba(80,200,120,0.9)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1600&q=80');
@@ -60,7 +138,6 @@
       text-align: center;
       padding: 100px 20px;
       border-radius: 0 0 80px 80px;
-      
     }
 
     .hero h2 {
@@ -203,6 +280,8 @@
         flex-direction: column;
         align-items: center;
       }
+
+      .slide { height: 200px; }
     }
   </style>
 </head>
@@ -215,6 +294,18 @@
       <a href="about.html">About</a>
     </nav>
   </header>
+
+  <!-- 🔥 Banner Slider -->
+  <div class="slider">
+    <div class="slides">
+      <div class="slide"><img src="WhatsApp Image 2025-11-04 at 23.57.44_6772c0df.jpg" alt="Banner 1"></div>
+      <div class="slide"><img src="WhatsApp Image 2025-11-04 at 23.57.44_e1eb8d08.jpg" alt="Banner 2"></div>
+      <div class="slide"><img src="WhatsApp Image 2025-11-04 at 23.57.45_e52fc600.jpg" alt="Banner 3"></div>
+    </div>
+    <button class="nav-btn prev">&#10094;</button>
+    <button class="nav-btn next">&#10095;</button>
+    <div class="dots"></div>
+  </div>
 
   <section class="hero">
     <h2>Welcome to Umme Library</h2>
@@ -255,5 +346,35 @@
     <p>&copy; 2025 Umme Library | All Rights Reserved</p>
   </footer>
 
+  <script>
+    const slides = document.querySelector('.slides');
+    const slideElements = document.querySelectorAll('.slide');
+    const dotsContainer = document.querySelector('.dots');
+    let slideIndex = 0;
+
+    // Create dots dynamically
+    slideElements.forEach((_, i) => {
+      const dot = document.createElement('span');
+      dot.classList.add('dot');
+      if (i === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => showSlide(i));
+      dotsContainer.appendChild(dot);
+    });
+    const dots = document.querySelectorAll('.dot');
+
+    function showSlide(index) {
+      if (index >= slideElements.length) index = 0;
+      if (index < 0) index = slideElements.length - 1;
+      slideIndex = index;
+
+      slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+      dots.forEach((dot, i) => dot.classList.toggle('active', i === slideIndex));
+    }
+
+    document.querySelector('.next').addEventListener('click', () => showSlide(slideIndex + 1));
+    document.querySelector('.prev').addEventListener('click', () => showSlide(slideIndex - 1));
+
+    setInterval(() => showSlide(slideIndex + 1), 4000); // auto slide every 4 sec
+  </script>
 </body>
 </html>
