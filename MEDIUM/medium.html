@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Medium | UMME LIBRARY</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0f1115;
+      color: #eaeaea;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    header {
+      height: 40vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+                  url('https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=1600&q=80') center/cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #ccc;
+      margin-top: 10px;
+    }
+
+    /* Medium Grid */
+    .medium-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      padding: 60px 20px;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      animation: fadeInUp 1.2s ease forwards;
+    }
+
+    .medium-card {
+      background: #1a1f26;
+      color: #4CAF50;
+      padding: 30px 0;
+      border-radius: 15px;
+      text-decoration: none;
+      font-weight: 600;
+      border: 1px solid transparent;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    }
+
+    .medium-card:hover {
+      background: #4CAF50;
+      color: #fff;
+      transform: translateY(-8px);
+      border: 1px solid #4CAF50;
+      box-shadow: 0 0 25px rgba(76,175,80,0.4);
+    }
+
+    /* Footer */
+    footer {
+      background: #0b0c0e;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: auto;
+    }
+
+    footer p {
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.2rem; }
+      header p { font-size: 1rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Select Medium</h1>
+    <p>Choose your preferred language to continue</p>
+  </header>
+
+  <main>
+    <div class="medium-grid">
+      <a href="../ENGLISH MEDIUM/ENGmain.html" class="medium-card">English Medium</a>
+      <a href="" class="medium-card">Bengali Medium<br>(Comming soon)</a>
+      <a href="" class="medium-card">Hindi Medium<br>(Comming soon)</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 UMME LIBRARY | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>

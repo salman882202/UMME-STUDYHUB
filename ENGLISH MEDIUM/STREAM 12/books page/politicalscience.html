@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class 10 | UMME LIBRARY</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f5fff8;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* ---------- Header ---------- */
+    header {
+      background: linear-gradient(135deg, #2E8B57, #3fb573);
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+
+    header h1 {
+      font-size: 2.3rem;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    /* ---------- Class Button Grid ---------- */
+    .class-grid {
+      display: grid;
+      gap: 10px;
+      padding: 10px;
+      flex: 0;
+      /* pushes footer down */
+    }
+
+    .class-btn {
+      background: #fff8;
+      border: 2px solid #2E8B57;
+      text-align: center;
+      padding: 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #2E8B57;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+
+    .class-btn:hover {
+      background: #2E8B57;
+      color: #fff;
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(46,139,87,0.3);
+    }
+
+    /* ---------- Footer ---------- */
+footer {
+  background: #2E8B57;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  margin-top: auto; /* Pushes footer to bottom if content is short */
+}
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      .class-grid {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>ENGLISH</h1>
+  </header>
+
+  <main class="class-grid">
+    <a href="" class="class-btn">CONTEMPORARY WORLD POLITICS</a>
+    <a href="" class="class-btn">POLITICS IN INDIA SINCE INDEPENDENCE</a>
+  </main>
+
+  <footer>
+    <p>© 2025 UMME LIBRARY | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
