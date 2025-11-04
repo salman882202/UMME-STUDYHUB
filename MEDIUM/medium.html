@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Select Medium | UMME LIBRARY</title>
-
+  <title>Select Medium | Umme Library</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
@@ -12,123 +11,166 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
     }
 
     body {
-      font-family: 'Poppins', sans-serif;
-      background: #0f1115;
-      color: #eaeaea;
+      background: linear-gradient(to bottom right, #f4f9f6, #e8f5ef);
+      color: #333;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      overflow-x: hidden;
     }
 
     /* Header */
     header {
-      height: 40vh;
-      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
-                  url('https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=1600&q=80') center/cover;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      background: linear-gradient(135deg, #2E8B57, #3cb371);
+      color: white;
       text-align: center;
-      color: #fff;
-      animation: fadeIn 1s ease forwards;
+      padding: 60px 20px 80px;
+      position: relative;
+      border-bottom-left-radius: 80px;
+      border-bottom-right-radius: 80px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
     }
 
     header h1 {
-      font-size: 3rem;
+      font-size: 2.8rem;
+      font-weight: 700;
       letter-spacing: 1px;
+      margin-bottom: 10px;
     }
 
     header p {
       font-size: 1.1rem;
-      color: #ccc;
-      margin-top: 10px;
+      color: #eaffea;
+      opacity: 0.9;
     }
 
-    /* Medium Grid */
-    .medium-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 30px;
+    /* Button Section */
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       padding: 60px 20px;
-      width: 100%;
+    }
+
+    .medium-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
       max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
-      animation: fadeInUp 1.2s ease forwards;
+      animation: fadeUp 1.2s ease;
     }
 
     .medium-card {
-      background: #1a1f26;
-      color: #4CAF50;
-      padding: 30px 0;
-      border-radius: 15px;
-      text-decoration: none;
-      font-weight: 600;
-      border: 1px solid transparent;
-      transition: all 0.3s ease;
-      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      background: white;
+      border-radius: 25px;
+      width: 220px;
+      padding: 30px 20px;
+      text-align: center;
+      border: 2px solid transparent;
+      transition: all 0.4s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     }
 
     .medium-card:hover {
-      background: #4CAF50;
-      color: #fff;
+      border: 2px solid #2E8B57;
       transform: translateY(-8px);
-      border: 1px solid #4CAF50;
-      box-shadow: 0 0 25px rgba(76,175,80,0.4);
+      box-shadow: 0 8px 25px rgba(46,139,87,0.3);
+    }
+
+    .medium-card h2 {
+      color: #2E8B57;
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .medium-card p {
+      font-size: 0.95rem;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .medium-card a {
+      display: inline-block;
+      background: linear-gradient(135deg, #2E8B57, #3cb371);
+      color: white;
+      text-decoration: none;
+      padding: 10px 25px;
+      border-radius: 25px;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
+
+    .medium-card a:hover {
+      background: #246b45;
+      transform: scale(1.05);
     }
 
     /* Footer */
     footer {
-      background: #0b0c0e;
+      background: #2E8B57;
+      color: white;
       text-align: center;
-      padding: 40px 20px;
-      margin-top: auto;
+      padding: 30px 15px;
+      border-top-left-radius: 60px;
+      border-top-right-radius: 60px;
+      box-shadow: 0 -5px 15px rgba(0,0,0,0.15);
     }
 
     footer p {
-      color: #888;
       font-size: 0.9rem;
+      opacity: 0.9;
     }
 
-    /* Animations */
-    @keyframes fadeIn {
+    @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       header h1 { font-size: 2.2rem; }
-      header p { font-size: 1rem; }
+      .medium-card { width: 80%; }
     }
   </style>
 </head>
-
 <body>
 
   <header>
-    <h1>Select Medium</h1>
-    <p>Choose your preferred language to continue</p>
+    <h1>Select Your Medium</h1>
+    <p>Choose your preferred language to continue learning</p>
   </header>
 
   <main>
-    <div class="medium-grid">
-      <a href="../ENGLISH MEDIUM/ENGmain.html" class="medium-card">English Medium</a>
-      <a href="" class="medium-card">Bengali Medium<br>(Comming soon)</a>
-      <a href="" class="medium-card">Hindi Medium<br>(Comming soon)</a>
+    <div class="medium-container">
+      <div class="medium-card">
+        <h2>English Medium</h2>
+        <p>Access books, notes & study materials in English.</p>
+        <a href="../ENGLISH MEDIUM/ENGmain.html">Continue</a>
+      </div>
+
+      <div class="medium-card">
+        <h2>Bengali Medium</h2>
+        <p>Explore all subjects in your native Bengali language.</p>
+        <a href="bengali.html">Continue</a>
+      </div>
+
+      <div class="medium-card">
+        <h2>Hindi Medium</h2>
+        <p>Study with simplified Hindi content and guides.</p>
+        <a href="hindi.html">Continue</a>
+      </div>
     </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 UMME LIBRARY | All Rights Reserved</p>
+    <p>© 2025 Umme Library | All Rights Reserved</p>
   </footer>
 
 </body>
